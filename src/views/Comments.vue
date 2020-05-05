@@ -33,6 +33,7 @@ export default {
   },
   computed: {
     idToken() {
+      console.log(this.$store.getters.idToken);
       return this.$store.getters.idToken;
     }
   },

@@ -29,6 +29,7 @@ axios.defaults.baseURL = 'https://firestore.googleapis.com/v1/projects/vuejs-htt
 // axios.interceptors.request.eject(interceptorsRequest);
 // axios.interceptors.response.eject(interceptorsResponse);
 
+store.dispatch('autoLogin');
 new Vue({
   router: router,
   store: store,
