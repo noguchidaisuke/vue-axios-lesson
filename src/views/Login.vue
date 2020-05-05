@@ -18,7 +18,6 @@
 </template>
 
 <script>
-//import axios from '../axios-auth';
 
 export default {
   data() {
@@ -29,7 +28,12 @@ export default {
   },
   methods: {
     login() {
-      return true
+      this.$store.dispatch('login', {
+        email: this.email,
+        password: this.password
+      });
+      this.email = "";
+      this.password = "";
     }
   }
 };

@@ -2,6 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 import axios from 'axios';
 import router from './router'
+import store from './store/index';
 
 Vue.config.productionTip = false
 
@@ -29,6 +30,7 @@ axios.defaults.baseURL = 'https://firestore.googleapis.com/v1/projects/vuejs-htt
 // axios.interceptors.response.eject(interceptorsResponse);
 
 new Vue({
-  router,
+  router: router,
+  store: store,
   render: h => h(App),
 }).$mount('#app')
